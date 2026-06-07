@@ -185,9 +185,8 @@ body {
 }
 
 .cell img {
-  height: 75%;
-  width: auto;
-  aspect-ratio: 1;
+  width: clamp(55px, 20vw, 100px);
+  height: clamp(55px, 20vw, 100px);
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #3a0000;
