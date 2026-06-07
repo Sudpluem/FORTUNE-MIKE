@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Fortune Mike</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-wrapper" id="gameWrapper">
+
+  <!-- Header -->
+  <div class="header">
+    <h1><img src="images/wild.png" class="header-icon"> FORTUNE MIKE</h1>
+    <p>เล่นกับเพื่อน • เพื่อความสนุก</p>
+  </div>
+
+  <!-- Tiger Banner -->
+  <div class="tiger-banner">
+    <div class="tiger-emoji"><img src="images/wild.png" alt="wild"></div>
+    <div class="win-banner">Win up to 2500x!</div>
+  </div>
+
+  <!-- Reel Frame -->
+  <div class="reel-frame" id="reelFrame">
+    <div class="win-line top" id="winLineTop"></div>
+    <div class="win-line mid" id="winLineMid"></div>
+    <div class="win-line bot" id="winLineBot"></div>
+    <div class="reels" id="reels"></div>
+  </div>
+
+  <!-- Win display -->
+  <div class="win-display">
+    <div class="win-text" id="winText"></div>
+    <div class="idle-text" id="idleText">กดเพื่อหมุน!</div>
+  </div>
+
+  <!-- Info Bar -->
+  <div class="info-bar">
+    <div class="info-item">
+      <div class="info-label">💰 เครดิต</div>
+      <div class="info-value" id="balanceDisplay">1000</div>
+    </div>
+    <div class="info-item">
+      <div class="info-label">🎯 เดิมพัน</div>
+      <div class="info-value" id="betDisplay">10</div>
+    </div>
+    <div class="info-item">
+      <div class="info-label">🏆 ชนะ</div>
+      <div class="info-value" id="winDisplay">0</div>
+    </div>
+  </div>
+
+  <!-- Bet row -->
+  <div class="bet-row">
+    <span class="bet-label">เดิมพัน:</span>
+    <button class="bet-btn" onclick="changeBet(-10)">−</button>
+    <span class="bet-value" id="betAmt">฿10</span>
+    <button class="bet-btn" onclick="changeBet(10)">+</button>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <button class="btn-side" id="btnTurbo" onclick="toggleTurbo()">
+      ⚡<span>TURBO</span>
+    </button>
+
+    <button class="btn-spin" id="btnSpin" onclick="spin()">🎰</button>
+
+    <button class="btn-side" id="btnAuto" onclick="toggleAuto()">
+      ▶️<span>AUTO</span>
+    </button>
+  </div>
+
+  <!-- Wild Zoom Overlay -->
+  <div class="wild-zoom-overlay" id="wildZoomOverlay">
+    <img src="images/wild.png" class="wild-zoom-img">
+  </div>
+
+  <!-- Wild Feature Overlay -->
+  <div class="feature-overlay" id="featureOverlay">
+    <div class="feature-title">✨ WILD FEATURE ✨</div>
+    <div class="feature-subtitle">หมุน 1 ครั้ง — ถ้าทุกช่องเหมือนกัน ×10!</div>
+    <div class="feature-target" id="featureTarget"></div>
+    <div class="feature-grid" id="featureGrid"></div>
+    <div class="feature-result" id="featureResult"></div>
+    <button class="feature-spin-btn" id="featureSpinBtn" onclick="featureSpin()">🎰 SPIN!</button>
+    <button class="feature-close-btn" id="featureCloseBtn" onclick="closeFeature()">รับเงิน!</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
